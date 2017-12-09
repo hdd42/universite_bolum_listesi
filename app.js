@@ -5,27 +5,34 @@ let app = express();
 app.set('json spaces' ,3)
 
 app.get('/api/okullar',async (req,res) =>{
-    let count = await Okul.query().count();
+ 
     let okullar = await Okul.query();
-    okullar = okullar.map(o =>Object.assign({},o,{bolumler:`/api/okullar/${o.kod}/bolumler`}));
-    res.status(200).json({meta:count[0], okullar});
+    okullar = okullar.map(o =>Object.assign({},o,{fakulteler:`/api/okullar/${o.kod}/fakulteler`, bolumler:`/api/okullar/${o.kod}/bolumler`}));
+    res.status(200).json({meta:{count:okullar.length}, okullar});
 })
+
+app.get('/api/okullar/:okulKod/fakulteler',async (req,res) =>{
+    let okul =  await Okul.query().findOne({kod:req.params.okulKod})
+    let fakulteler = await Bolum.query()
+    .where('okulKod','=',okul.kod)
+    .distinct('fakulte')
+
+    res.status(200).json({okul,meta:{count:fakulteler.length}, fakulteler});
+})
+
 
 app.get('/api/okullar/:okulKod/bolumler',async (req,res) =>{
     
     let okul = await Okul.query().findOne({kod:req.params.okulKod});
-    let count = await Bolum.query()
-    .where('okulKod','=',okul.kod)
-    .count();
+
     let bolumler = await Bolum.query()
     .where('okulKod','=',okul.kod)
-    res.status(200).json({okul,meta:count[0], bolumler});
+    res.status(200).json({okul,meta:{count:bolumler.length}, bolumler});
 })
 
 app.get('/api/bolumler',async (req,res) =>{
-    let count = await Bolum.query().count();
     let bolumler = await Bolum.query();
-    res.status(200).json({meta:count[0], bolumler});
+    res.status(200).json({meta:{count:bolumler.length}, bolumler});
 })
 app.use("/api/export", (req,res) =>{
     let db =`${__dirname}/yokOkulListe.db`;
