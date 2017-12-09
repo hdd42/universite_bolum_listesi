@@ -77,7 +77,7 @@ async function parse() {
           bolumListesi.push(bolum);
         }
         return bolumListesi;
-      });
+      },{waitUntil: 'networkidle2'});
       //console.log("bolumListesi : ", bListe);
       tumBolumler.push(...bListe);
     }
@@ -100,6 +100,7 @@ async function parse() {
     }
     await page.evaluate(() => document.body.innerHTML = "<h3 style='margin:100px'>JSON Donusumu Tamamlandi. Tarayici Kapatiliyor.....</h3>");
     setTimeout(async () => { await Browser.close(); }, 2000)
+    console.log("Lisans scripti calismayi tamamladi.");
 
   } catch (error) {
     console.log("Error : ", error);

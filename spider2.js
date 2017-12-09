@@ -95,7 +95,8 @@ async function parse() {
     }
     await page.evaluate(() => document.body.innerHTML = "<h3 style='margin:100px'>JSON Donusumu Tamamlandi. Tarayici Kapatiliyor.....</h3>");
     setTimeout(async () => { await Browser.close(); }, 2000)
-
+    console.log("On Lisans scripti calismayi tamamladi.");
+    
   } catch (error) {
     console.log("Error : ", error);
     if (Browser) {
