@@ -10,7 +10,7 @@
 
 ## http://localhost:3000/ adresine giderek, okullari ve bolumleri gorebilir veya sql/json olarak export edebilirsiniz
 
-#Otomasyon scriptini tekrar calistirmak icin,
+# Otomasyon scriptini tekrar calistirmak icin,
 ### (2017 itibariyle, okull/bolumler `yokOkulListe.db` de kayitlidir, otomasyonu calistirmadan da kullanabilirsiniz.)
 
 ### oncelikle, ana dizindeki `yokOkulListe.db` yi silin
