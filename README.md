@@ -20,3 +20,6 @@
 
 ### yaklasik olarak 7-10dk lik bir sure de scriptler bilgileri alip html => json donusumunden sonra, yokOkulListe.db kayit edecektir. 
 
+# script hatasiz calissada, her hangi bir dogrulama (butun fakulte ve bolumlerin eksiksiz olarak alinip alinmadigina dair) yapilmadi. Universite => Fakulte => Bolum eslemeleri ise dogru.
+### Toplam okul sayisi  : 192
+### Toplam Bolum Sayisi : 21998
