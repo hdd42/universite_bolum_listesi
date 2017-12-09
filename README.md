@@ -1,5 +1,5 @@
 # universite fakulte / bolum listesi 
-### headless chrome ve puppeteer ile https://yokatlas.yok.gov.tr den univeriste / okul bilgilerini alir.
+### headless chrome ve puppeteer ile https://yokatlas.yok.gov.tr den universite / okul bilgilerini alir.
 #### kucuk bir node.js uygulamasi olarak rest api olarak sunar.
 
 # kullanim 
