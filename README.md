@@ -14,8 +14,8 @@
 ### (2017 itibariyle, okull/bolumler `yokOkulListe.db` de kayitlidir, otomasyonu calistirmadan da kullanabilirsiniz.)
 
 ### oncelikle, ana dizindeki `yokOkulListe.db` yi silin
-### daha sonra sirasiyla `node spider.js` ile lisan scriptini
-### lisan scripti tamamlanincada, `node spider2.js` ile onlisans scriptini calistirin.
+### daha sonra sirasiyla `node spider.js` ile lisans scriptini
+### lisans scripti tamamlaninca da, `node spider2.js` ile onlisans scriptini calistirin.
 
-### yaklasik oalrak 7-10dk lik bir sure de scriptler bilgielri alip html => json donusumunden sonra, yokOkulListe.db kayit edecektir. 
+### yaklasik olarak 7-10dk lik bir sure de scriptler bilgileri alip html => json donusumunden sonra, yokOkulListe.db kayit edecektir. 
 
