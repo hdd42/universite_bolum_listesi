@@ -55,7 +55,7 @@ async function parse() {
       await page.goto(okul.url);
       let bListe = await page.evaluate(() => {
         let bolumLinkeri = document.querySelectorAll(
-          "#bs-collapse > div > div > h4 > a"
+            "div > div > h4 > a"
         );
         let bolumListesi = [];
         for (var i = 0; i < bolumLinkeri.length; i++) {
